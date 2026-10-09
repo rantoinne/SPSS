@@ -1,0 +1,4 @@
+module SPSSEngineC {
+    header "spss/capi.h"
+    export *
+}

@@ -1,0 +1,9 @@
+{
+  "variable": "age",
+  "n": 6,
+  "mean": 26.6666666667,
+  "min": 20,
+  "max": 35,
+  "tolerance": 1e-6,
+  "notes": "Golden values for sample.csv; compare vs SPSS 30 when license available"
+}

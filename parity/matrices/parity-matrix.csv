@@ -1,0 +1,65 @@
+FeatureID,SPSSCommand,Module,UIWorkflow,Syntax,DataSemantics,Output,Tests,Status,Phase
+P0-TARGET,N/A,N/A,Freeze SPSS 30.x as UI gold standard,N/A,N/A,N/A,manual,done,0
+P0-MENUS,N/A,Base,"File Edit View Data Transform Analyze Graphs Utilities Window Help",N/A,N/A,N/A,checklist,done,0
+P0-FIDELITY-SAV,GET/SAVE DATA,Base,File Open/Save,.sav/.zsav/.por,"labels missing formats",round-trip,unit,partial,0
+P0-UI-STYLE,N/A,Base,Dialog OK/Paste/Reset/Cancel/Help order,N/A,N/A,N/A,checklist,done,0
+P1-DATA-VIEW,N/A,Base,Data Editor Data View tab,N/A,"formats value-labels missing filter weight split",grid,ui,done,1
+P1-VAR-VIEW,N/A,Base,Data Editor Variable View tab,N/A,"Name Type Width Decimals Label Values Missing Columns Align Measure Role",grid,ui,done,1
+P1-DICT,N/A,Base,Dictionary overlay,N/A,cases+metadata,N/A,unit,done,1
+P1-CSV,GET DATA /TYPE=TXT,Base,File Import CSV wizard,GET DATA,delimited,dataset,unit,done,1
+P1-XLSX,GET DATA /TYPE=XLSX,Base,File Import Excel wizard,GET DATA,sheets,dataset,unit,partial,1
+P1-SAV-MVP,GET FILE / SAVE OUTFILE,Base,File Open/Save SAV,GET FILE; SAVE,labels missing formats,dataset,unit,partial,1
+P1-UNDO,N/A,Base,Edit Undo/Redo,N/A,case/dict mutations,N/A,unit,done,1
+P2-COMPUTE,COMPUTE,Base,Transform Compute Variable,COMPUTE,expressions,dataset,unit,done,2
+P2-RECODE,RECODE,Base,Transform Recode,RECODE,into same/different,dataset,unit,done,2
+P2-AUTORECODE,AUTORECODE,Base,Transform Automatic Recode,AUTORECODE,string->numeric,dataset,unit,done,2
+P2-RANK,RANK,Base,Transform Rank Cases,RANK,ties,dataset,unit,done,2
+P2-SORT,SORT CASES,Base,Data Sort Cases,SORT CASES,asc/desc,dataset,unit,done,2
+P2-SELECT,SELECT IF / FILTER,Base,Data Select Cases,SELECT IF; FILTER BY,filter status,dataset,unit,done,2
+P2-WEIGHT,WEIGHT,Base,Data Weight Cases,WEIGHT BY,weight status,dataset,unit,done,2
+P2-SPLIT,SPLIT FILE,Base,Data Split File,SPLIT FILE,split status,dataset,unit,done,2
+P2-AGGREGATE,AGGREGATE,Base,Data Aggregate,AGGREGATE,break vars,dataset,unit,done,2
+P2-MERGE,ADD FILES / MATCH FILES,Base,Data Merge Files,ADD FILES; MATCH FILES,cases/vars,dataset,unit,done,2
+P2-RESTRUCTURE,VARSTOCASES / CASESTOVARS,Base,Data Restructure,VARSTOCASES; CASESTOVARS,wide/long,dataset,unit,done,2
+P2-PASTE,N/A,Base,Dialog Paste button,*,valid syntax,syntax,ui,done,2
+P3-PARSER,N/A,Base,Syntax Editor run,Base+advanced commands,diagnostics,log,unit,done,3
+P3-EDITOR,N/A,Base,Syntax Editor,N/A,highlight run selection,errors,ui,done,3
+P3-HISTORY,N/A,Base,Utilities command history,N/A,cancel,log,ui,done,3
+P4-FREQUENCIES,FREQUENCIES,Base,Analyze Descriptive Statistics Frequencies,FREQUENCIES,weights missing,tables charts,fixture,done,4
+P4-DESCRIPTIVES,DESCRIPTIVES,Base,Analyze Descriptive Statistics Descriptives,DESCRIPTIVES,weights missing,tables,fixture,done,4
+P4-EXPLORE,EXAMINE,Base,Analyze Descriptive Statistics Explore,EXAMINE,weights missing,tables charts,fixture,done,4
+P4-CROSSTABS,CROSSTABS,Base,Analyze Descriptive Statistics Crosstabs,CROSSTABS,weights missing,tables,fixture,done,4
+P4-TTEST,T-TEST,Base,Analyze Compare Means,T-TEST,weights missing,tables,fixture,done,4
+P4-ANOVA,ONEWAY,Base,Analyze Compare Means One-Way ANOVA,ONEWAY,weights missing,tables,fixture,done,4
+P4-CORR,CORRELATIONS,Base,Analyze Correlate Bivariate,CORRELATIONS,weights missing,tables,fixture,done,4
+P4-NPAR,NPAR TESTS,Base,Analyze Nonparametric Tests,NPAR TESTS,core set,tables,fixture,partial,4
+P4-REGRESSION,REGRESSION,Base,Analyze Regression Linear,REGRESSION,diagnostics,tables charts,fixture,done,4
+P4-CHARTS,GRAPH / GGRAPH,Base,Graphs Chart Builder,GRAPH,tied to Base procs,charts,ui,partial,4
+P5-OUTPUT,OMS / OUTPUT,Base,Output Viewer,N/A,outline tables charts,document,ui,done,5
+P5-PIVOT,N/A,Base,Pivot table edit,N/A,dims formats footnotes,tables,unit,done,5
+P5-EXPORT,OUTPUT EXPORT,Base,File Export,OUTPUT EXPORT,HTML CSV PDF PNG,files,unit,partial,5
+P5-AUTOSAVE,N/A,Base,Autosave crash recovery,N/A,output docs,files,unit,done,5
+P6-GLM,UNIANOVA,Advanced,Analyze General Linear Model,UNIANOVA,fixed-effects OLS,tables,unit,mvp,6
+P6-FACTOR,FACTOR,Advanced,Analyze Dimension Reduction Factor,FACTOR,PCA covariance,tables,unit,mvp,6
+P6-CLUSTER,QUICK CLUSTER,Advanced,Analyze Classify,QUICK CLUSTER,k-means,tables,unit,mvp,6
+P6-LOGISTIC,LOGISTIC REGRESSION,Regression,Analyze Regression,LOGISTIC REGRESSION,IRLS binary,tables,unit,mvp,6
+P6-SURVIVAL,KM,Advanced,Analyze Survival,KM,Kaplan-Meier,tables charts,unit,mvp,6
+P6-MISSING,MULTIPLE IMPUTATION,Missing Values,Analyze Missing Value Analysis,MULTIPLE IMPUTATION,mean impute diag,tables,unit,mvp,6
+P6-BOOTSTRAP,BOOTSTRAP,Base,Analyze Bootstrap,BOOTSTRAP,resample means,tables,unit,mvp,6
+P6-FORECAST,TSMODEL,Forecasting,Analyze Forecasting,TSMODEL,SMA naive,tables,unit,mvp,6
+P6-MIXED,MIXED,Advanced,Analyze Mixed Models,MIXED,N/A,tables,stub,planned,6
+P7-CTABLES,CTABLES,Custom Tables,Analyze Tables,CTABLES,row x col summary,tables,unit,mvp,7
+P7-EXACT,EXACT,Exact Tests,Analyze Exact Tests,EXACT,Fisher 2x2,tables,unit,mvp,7
+P7-TREE,TREE,Decision Trees,Analyze Classify Tree,TREE,single split,tables,unit,mvp,7
+P7-NN,NEURAL NETWORK,Neural Networks,Analyze Neural Networks,NEURAL NETWORK,perceptron,tables,unit,mvp,7
+P7-CS,CS*,Complex Samples,Analyze Complex Samples,CS*,N/A,tables,stub,planned,7
+P7-CAT,CATEGORIES,Categories,Analyze Dimension Reduction,N/A,N/A,tables,stub,planned,7
+P7-CONJOINT,CONJOINT,Conjoint,Analyze Conjoint,CONJOINT,N/A,tables,stub,planned,7
+P7-DM,N/A,Direct Marketing,Direct Marketing,N/A,N/A,tables,stub,planned,7
+P8-PYTHON,BEGIN PROGRAM,Base,Extensions Python,BEGIN PROGRAM-PYTHON,isolated subprocess,log,unit,mvp,8
+P8-R,BEGIN PROGRAM R,Base,Extensions R,BEGIN PROGRAM-R,isolated if Rscript,log,unit,mvp,8
+P8-ODBC,GET DATA /TYPE=ODBC,Base,File Database,GET DATA,SQL,dataset,stub,planned,8
+P8-ARROW,N/A,Base,File Parquet/Arrow,N/A,interchange,dataset,stub,planned,8
+P9-DIFF,N/A,N/A,Differential tests vs SPSS 30,N/A,tolerances,fixtures,fixture,partial,9
+P9-A11Y,N/A,N/A,VoiceOver accessibility,N/A,N/A,N/A,manual,partial,9
+P9-NOTARIZE,N/A,N/A,Apple Silicon notarized .app,N/A,N/A,release,manual,planned,9
